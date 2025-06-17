@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+import HelloWorld from './components/HelloWorld.vue'
 import HandlingUserInput from './components/HandlingUserInput.vue'
 import AttributeBindings from './components/AttributeBindings.vue'
 import ConditionalsAndLoops from './components/ConditionalsAndLoops.vue'
@@ -17,6 +18,7 @@ const todos = ref([
 
 <template>
     <h1>Tuto Vue 3</h1>
+    <HelloWorld />
     <HandlingUserInput />
     <AttributeBindings />
     <ConditionalsAndLoops />
