@@ -65,3 +65,19 @@ const { x, y } = useMouse()
 ## ✅ Vuetify
 ## ✅ Vue Devtools
 ## ✅ Volar
+## ✅ Vue CLI 3
+
+Vue CLI is in Maintenance Mode!
+ - Install
+```sh
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+``` 
+
+- create a project
+```sh
+vue create my-project
+# OR
+vue ui
+``` 
