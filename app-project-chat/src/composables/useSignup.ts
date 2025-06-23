@@ -5,7 +5,11 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 const error = ref(null)
 const isPending = ref(false)
 
-const signup = async (email, password, displayName) => {
+const signup = async (
+    email: string, 
+    password: string, 
+    displayName: string
+) => {
     error.value = null
     isPending.value = true
     
@@ -26,7 +30,7 @@ const signup = async (email, password, displayName) => {
         isPending.value = false
         console.log("Utilisateur inscrit:", user)
 
-    } catch (err) {
+    } catch (err: any) {
         error.value = err.message
         isPending.value = false
         console.error('Erreur lors de l’inscription :', err)

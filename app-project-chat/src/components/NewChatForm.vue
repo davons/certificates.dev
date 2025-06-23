@@ -30,10 +30,11 @@ const handleSubmit = async () => {
             placeholder="Type a message"
             v-model="message"
             @keypress.enter.prevent="handleSubmit"
+            :disabled="isPending"
         >
         </textarea>
         <div v-if="error" class="error"> {{ error }}</div>
-        <div v-if="isPending"> Loading... </div>
+        <div v-if="isPending" class="loading"> Loading... </div>
     </form>
 </template>
 
@@ -58,5 +59,10 @@ textarea {
     color:crimson;
     margin: 10px;
     padding-bottom: 10px;
+}
+.loading {
+    margin: 10px;
+    padding-bottom: 10px;
+    color: blue;
 }
 </style>

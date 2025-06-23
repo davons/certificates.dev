@@ -41,7 +41,7 @@ const useCollection = (collectionName: string) => {
     }
 
     //get collection documents
-    const getCollection = async (collectionName) => {
+    const getCollection = async (collectionName: string) => {
         error.value = null
         isPending.value = true
 

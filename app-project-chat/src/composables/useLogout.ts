@@ -18,7 +18,7 @@ const logout = async () => {
         
         console.log("Utilisateur déconnecté")
 
-    } catch (error) {
+    } catch (error: any) {
         error.value = error.message
         isPending.value = false;
         console.log('Erreur lors de la deconnection', error.message)
