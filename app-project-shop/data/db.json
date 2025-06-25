@@ -1,0 +1,23 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Guitare Électrique",
+      "price": 20.99,
+      "image": "https://via.placeholder.com/300x200?text=Guitare"
+    },
+    {
+      "id": "2",
+      "name": "Batterie Acoustique",
+      "price": 30.99,
+      "image": "https://via.placeholder.com/300x200?text=Batterie"
+    },
+    {
+      "id": "3",
+      "name": "Clavier MIDI",
+      "price": 10.99,
+      "image": "https://via.placeholder.com/300x200?text=Clavier"
+    }
+  ],
+  "cart": []
+}
