@@ -21,6 +21,10 @@ const toggleCompleted = (taskId: number) => {
 const closeModal = () => {
   isModalActive.value = false
 }
+
+store.$subscribe((mutation, state) => {
+  localStorage.setItem('tasks', JSON.stringify(state.tasks))
+})
 </script>
 
 <template>

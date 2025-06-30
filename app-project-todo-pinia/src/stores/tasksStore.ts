@@ -4,19 +4,10 @@ import type { ITask } from '@/types/ITask'
 
 export const useTasksStore = defineStore('tasks', () => {
   // State
-  const tasks = ref<ITask[]>([
-    {
-      id: 1,
-      name: 'Website design',
-      description: 'Define the style guide, branding and create the webdesign on Figma.',
-      completed: true,
-    },
-  ])
+  const storedTasks = localStorage.getItem('tasks')
+  const tasks = ref<ITask[]>(storedTasks ? JSON.parse(storedTasks) : [])
 
   const filterBy = ref<'all' | 'todo' | 'done'>('all')
-
-  // Auto-increment ID
-  let nextId = 2
 
   // Computed
   const filteredTasks = computed(() => {
@@ -32,7 +23,8 @@ export const useTasksStore = defineStore('tasks', () => {
 
   // Actions
   const addTask = (task: Omit<ITask, 'id'>) => {
-    tasks.value.push({ ...task, id: nextId++ })
+    const id = Date.now()
+    tasks.value.push({ ...task, id })
   }
 
   const toggleTask = (id: number) => {
