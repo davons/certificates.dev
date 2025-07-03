@@ -16,7 +16,7 @@ const seedProjects = async (num) => {
   const projects = []
 
   for (let i = 0; i < num; i++) {
-    const name = faker.lorem.word(5)
+    const name = faker.lorem.words(5)
 
     projects.push({
       name: name,

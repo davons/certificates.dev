@@ -17,3 +17,9 @@ export interface ITask {
   project_id: number
   collaborators: string[]
 }
+
+export interface ILink {
+  title: string
+  to: string
+  icon: string
+}
